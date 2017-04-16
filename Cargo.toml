@@ -1,12 +1,15 @@
 [package]
-name = "rust-libcore"
-version = "0.0.3"
+name = "rust-liballoc"
+version = "0.0.1"
 authors = ["The Rust Developers Team"]
 build = "./build.rs"
-description = "Libcore wrapped into cargo package, suitable for cross-builds"
+description = "Liballoc wrapped into cargo package, suitable for cross-builds"
 license-file = "COPYRIGHT"
-repository = "https://github.com/hackndev/rust-libcore"
+repository = "https://github.com/mark-i-m/rust-liballoc"
 
 [lib]
-name = "core"
-path = "rust/src/libcore/lib.rs"
+name = "alloc"
+path = "rust/src/liballoc/lib.rs"
+
+[dependencies]
+rust-libcore = "0.0.3"
